@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Articles</h1>
-<a class="btn btn-primary btn-sm" href="/articles/new">New article</a>
+<% if user_signed_in? %>
+  <a class="btn btn-primary btn-sm" href="/articles/new">New article</a>
+<% end %>
 <% @articles.each do |article| %>
   <h3><%= link_to article.title, article %></h3>
   <datestyle><%= article.date.strftime("%a, %d %b %Y") %></datestyle>
