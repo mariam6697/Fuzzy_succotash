@@ -7,6 +7,6 @@
 <% @articles.each do |article| %>
   <h3><%= link_to article.title, article %></h3>
   <datestyle><%= article.date.strftime("%a, %d %b %Y") %></datestyle>
-  <p><%= simple_format(article.text) %></p>
+  <p><div class="truncate lines-3"><%= simple_format(article.text) %></div></p>
   <div style="font-style: italic; font-weight: bold"><%= link_to 'Keep reading...', article %></div>
 <% end %>
