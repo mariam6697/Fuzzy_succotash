@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h3> <%= @article.title %> </h3>
+<%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-info btn-sm" %>
+<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-sm" %>
+<%= link_to 'Back', articles_path, :class => "btn btn-secondary btn-sm" %>
+<div style="font-style: italic; font-size: 10px"><%= @article.date.strftime("%a, %d %b %Y") %></div>
+<%= image_tag(@article.image_url, :width => 600) if @article.image.present? %>
+<br>
+<p><%= simple_format(@article.text) %></p>
+
+<h4>Comments</h4>
+<% @article.comments.each do |comment| %>
+  <div>
+    <p><strong><%= comment.commenter %></strong>, <datestyle>on <%= comment.date.strftime("%a %d %b %Y, %H:%M%p") %></datestyle></p>
+    <p><%= comment.body %></p>
+    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+<% end %>
+
+<div style="margin: auto"><%= render 'comments/form' %></div>
