@@ -75,7 +75,8 @@ body, html {
 }
 
 .bgimg {
-    background-image: url('background.jpg');
+    /* background-image: url('background.jpg'); local image doesn't work on heroku */
+    background-image: url("https://c1.staticflickr.com/9/8392/8601873630_6bddbb223f_h.jpg");
     min-height: 33%;
     position: relative;
     opacity: 0.5;
