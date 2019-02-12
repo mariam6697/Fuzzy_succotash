@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails blog: production" uuid="bc7a59b5-6dbf-426e-94ee-3173e20984ce">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>blog</user-name>
+    </data-source>
+    <data-source name="Rails blog: test" uuid="7aa13649-d627-4498-943d-04aa00087d90">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>user1</user-name>
+    </data-source>
+    <data-source name="Rails blog: development" uuid="cd82b0ea-fd15-48c3-ad7b-949b260c5f6d">
+      <database-info product="PostgreSQL" version="10.6 (Ubuntu 10.6-0ubuntu0.18.04.1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2" dbms="POSTGRES" exact-version="10.6" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>user1</user-name>
+      <introspection-schemas>@:@</introspection-schemas>
+    </data-source>
+  </component>
+</project>

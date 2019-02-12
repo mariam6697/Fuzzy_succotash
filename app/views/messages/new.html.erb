@@ -1,0 +1,14 @@
+<h1>Contact</h1>
+<p>Put your complaints here.</p>
+<%= form_for @message, url: create_message_url do |f| %>
+  <%= notice %>
+  <%= @message.errors.full_messages.join(', ') %>
+
+  <p>Name</p>
+  <%= f.text_field :name, placeholder: "Your name", :size => 50 %>
+  <p>E-mail</p>
+  <%= f.email_field :email, placeholder: "Your e-mail", :size => 50 %>
+  <p>Message</p>
+  <%= f.text_area :body, placeholder: "Write your message here", :cols => "60", :rows => "10" %>
+  <button type="submit" class="btn btn-success btn-sm">Send</button>
+<% end %>

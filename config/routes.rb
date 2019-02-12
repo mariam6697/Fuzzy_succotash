@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  get "contact", to: "contact#index"
-  get "about", to: "contact#about"
+  get "about", to: "site#index"
+  get "contact", to: "messages#new", as: "new_message"
+  post "contact", to: "messages#create", as: "create_message"
   resources :comments
   resources :articles
   root to: redirect('/articles')
